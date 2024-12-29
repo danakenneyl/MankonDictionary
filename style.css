@@ -1,8 +1,18 @@
+body {
+    display: flex;                   /* Enable flexbox on the body */
+    justify-content: center;         /* Centers the .container horizontally */
+    align-items: center;             /* Centers the .container vertically */
+    height: 100vh;                   /* Full viewport height */
+    margin: 0;                       /* Remove default body margin */
+    background-color: #f4f4f4;
+}
 .container {
     display: flex;
+    flex-direction: column;  
     justify-content: center;            /* Centers horizontally */
     align-items: center;                /* Centers vertically */
-    height: 100vh;                      /* Full viewport height */
+    height: 75vh;                      /* Full viewport height */
+    width: 75vh;
     text-align: center;                 /* Center text horizontally within the container */
     background-color: #f4f4f4;
     outline: 5px solid #333;  /* Adds a 5px solid outline with a dark color */
