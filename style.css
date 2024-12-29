@@ -9,5 +9,5 @@
   }
   
   h1, p {
-    margin: 10% 10% 10% 10%;        /* Optional: remove any default margins */
+    margin: 0;        /* Optional: remove any default margins */
   }
