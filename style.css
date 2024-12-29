@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;            /* Centers horizontally */
+    align-items: center;                /* Centers vertically */
+    height: 100vh;                      /* Full viewport height */
+    text-align: center;                 /* Center text horizontally within the container */
+    background-color: #f4f4f4;
+    outline: 5px solid #333;  /* Adds a 5px solid outline with a dark color */
+  }
+  
+  h1, p {
+    margin: 10% 10% 10% 10%;        /* Optional: remove any default margins */
+  }
