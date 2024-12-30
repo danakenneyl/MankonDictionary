@@ -27,27 +27,31 @@
         </header>
     </div>
     <div class="content-wrapper">
-    <div class="content"> 
-        <!-- Basic Word Information -->
-        <div class ="entry__word">bɨ́ŋə 
-            <span class="entry__pos">v.</span>
-            <img src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/main/speaker.png" alt="Speech Icon" width="30">
-        </div> 
-        <p>dance</p>
-        <p>(Mankon def) to move one's body rhythmically usually to music</p>
-        <!-- Example Sentences Section -->
-        <div class="entry__nested-box"> 
-            <h3>Sentence Example</h3>   
-            <div class="entry__nested-box--sentence-example">à bɨ̂ŋ ʃìʔínɛ́ 
-                <img src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/main/speaker.png" alt="Speech Icon" width="20">
-            </div> 
-            <p>She dances well</p>
-            <div class="entry__nested-box--sentence-example">à bɨ́ŋɛ́
-                <img src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/main/speaker.png" alt="Speech Icon" width="20">
-            </div> 
-            <p>She dances</p>
+        <div class="search-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search English word...">
+                <div id="searchResults" class="hidden"></div>
+            </div>
         </div>
     </div>
+    <div class="content-wrapper" id="entryContainer">
+        <div class="content">
+            <div class="entry__word" id="wordEntry">
+                <!-- Word will be inserted here -->
+                <span class="entry__pos" id="posEntry"></span>
+                <img src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/main/speaker.png" alt="Speech Icon" width="30" class="word-audio-icon">
+            </div>
+            <p id="translationEntry"></p>
+            <p id="definitionEntry"></p>
+            <div class="entry__nested-box">
+                <h3>Sentence Example</h3>
+                <div id="sentencesContainer">
+                    <!-- Sentences will be inserted here -->
+                </div>
+            </div>
+        </div>
     </div>
+
+    
     </body>
 </html>

@@ -1,22 +1,16 @@
-<!-- Save this as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Add this line to link your CSS file -->
+    <title>Browse Dictionary</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Copy and paste this code at the top of each HTML body section for header -->
     <div class="background-container"></div>
     <div class="content-wrapper">
         <header class="header">
-            <img 
-                src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/dev/MACUDAMN.jpg" 
-                alt="Company Emblem" 
-                class="emblem"
-            >
+            <img src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/dev/MACUDAMN.jpg" alt="Company Emblem" class="emblem">
             <div class="title">
                 <span class="title-line">Mankon People's</span><br>
                 <span class="title-line">Dictionary</span>
@@ -25,13 +19,38 @@
                 <button class="nav-button" onclick="location.href='index.html'">About</button>
                 <button class="nav-button" onclick="location.href='browse.html'">Browse Dictionary</button>
                 <button class="nav-button" onclick="location.href='alphabet.html'">Language Help</button>
-              </div>
+            </div>
         </header>
     </div>
-    <!-- End of header code -->
+
     <div class="content-wrapper">
-        <div class="content"></div>
+        <div class="search-wrapper">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search English word...">
+                <div id="searchResults" class="hidden"></div>
+            </div>
+        </div>
     </div>
-    <!-- End of copied code-->
+
+    <div class="content-wrapper" id="entryContainer">
+        <div class="content">
+            <div class="entry__word" id="wordEntry">
+                <!-- Word will be inserted here -->
+                <span class="entry__pos" id="posEntry"></span>
+                <img src="https://raw.githubusercontent.com/danakenneyl/MankonDictionary/main/speaker.png" alt="Speech Icon" width="30" class="word-audio-icon">
+            </div>
+            <p id="translationEntry"></p>
+            <p id="definitionEntry"></p>
+            <div class="entry__nested-box">
+                <h3>Sentence Example</h3>
+                <div id="sentencesContainer">
+                    <!-- Sentences will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
