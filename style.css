@@ -1,23 +1,66 @@
 body {
-    display: flex;                   /* Enable flexbox on the body */
-    justify-content: center;         /* Centers the .container horizontally */
-    align-items: center;             /* Centers the .container vertically */
-    height: 100vh;                   /* Full viewport height */
-    margin: 0;                       /* Remove default body margin */
+    display: flex;                      /* Enable flexbox on the body */
+    justify-content: center;            /* Centers horizontally */
+    align-items: center;                /* Centers vertically */
+    height: 100vh;                      /* Full viewport height */
+    margin: 0;                 
     background-color: #f4f4f4;
 }
 .container {
     display: flex;
     flex-direction: column;  
-    justify-content: center;            /* Centers horizontally */
-    align-items: center;                /* Centers vertically */
-    height: 75vh;                      /* Full viewport height */
-    width: 75vh;
-    text-align: center;                 /* Center text horizontally within the container */
-    background-color: #f4f4f4;
-    outline: 5px solid #333;  /* Adds a 5px solid outline with a dark color */
+    justify-content: center;            
+    align-items: center;                
+    height: 75%;                        /* 75% of viewport height */
+    width: 75%;
+    background-color: #ff8502;
+    outline: 5px solid #333;          /* Adds a 5px solid outline with a dark color */
   }
-  
-  h1, p {
-    margin: 0;        /* Optional: remove any default margins */
+.entry {
+    display: flex;
+    flex-direction: column;             /* Stack <div><.div> in a Column */
+    height: 75%;
+    width: 75%;
+    text-align: left;
+    background-color: #ff8502;
+    outline: 5px solid #333; 
+}
+.entry__nested-box {
+    display: flex;
+    flex-direction: column;  
+    height: 25%;
+    width: 90%;
+    text-align: left;
+    background-color: #ff8502;
+    outline: 5px solid #333; 
+    margin: 5%;
+}
+.entry__pos, .entry__definition {       /* Part of Speech (pos) */
+    font-size: 22pt;
+    font-weight: normal;
+    margin: 5% 2% 0% 5%                 /* Order: top, right, bottom, left */
+}
+.entry__nested-box--sentence-example {
+    display: flex;
+    justify-content: space-between;     /* Push items to opposite ends */
+    align-items: center;                
+    font-weight: bold;
+    margin: 0% 50% 0% 5%;
+    font-size: 15pt;
+}
+.entry__word {
+    margin: 5% 5% 0% 5%; 
+    font-size: 30pt;
+    font-weight: bold;
+}
+h1 {
+    margin: 5%;                
   }
+h3 {
+    margin: 1% 0% 0% 2%; 
+    font-size: 18pt;
+}
+p,b {
+    margin: 0% 0% 0% 5%;
+    font-size: 15pt;
+}  
