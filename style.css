@@ -1,4 +1,11 @@
 body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+.container {
     display: flex;                      /* Enable flexbox on the body */
     justify-content: center;            /* Centers horizontally */
     align-items: center;                /* Centers vertically */
@@ -6,30 +13,27 @@ body {
     margin: 0;                 
     background-color: #f4f4f4;
 }
-.container {
+.header {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
+    width: 75%; 
     justify-content: center;            
     align-items: center;                
-    height: 75%;                        /* 75% of viewport height */
-    width: 75%;
     background-color: #ff8502;
-    outline: 5px solid #333;          /* Adds a 5px solid outline with a dark color */
+    outline: 5px solid #000000;  /* Adds a 5px solid outline with a dark color */
+    margin-bottom: 5%;
   }
 .entry {
     display: flex;
     flex-direction: column;             /* Stack <div><.div> in a Column */
-    height: 75%;
     width: 75%;
     text-align: left;
-    background-color: #ff8502;
+    background-color: #ffffff;
     outline: 5px solid #333; 
 }
 .entry__nested-box {
     display: flex;
     flex-direction: column;  
-    height: 25%;
-    width: 90%;
     text-align: left;
     background-color: #ff8502;
     outline: 5px solid #333; 
