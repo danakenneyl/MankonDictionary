@@ -53,31 +53,59 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15rem;
+    gap: 1rem;
     background-color: #E87200;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.emblem {
+    }
+    
+    /* Navigation Styles */
+    .nav-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto; /* Changed from margin-right to margin-left */
+    }
+    
+    .nav-button {
+    padding: 0.5rem 1rem;
+    background-color: #E87200;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    }
+    
+    .nav-button:hover {
+    background-color: #000000;
+    }
+    
+    /* Rest of your existing styles */
+    .emblem {
     max-width: 150px;
     height: auto;
     outline: 5px solid #000000
-}
-
-.title {
+    }
+    
+    .title {
     color: white;
     font-size: 2.5rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: .5;
+    }
+.title-line {
+    display: block; /* Ensures each line spans its own block */
 }
 
 /* Entry Styles */
-.entry {
+.content {
     display: flex;
     flex-direction: column;
     width: 75%;
     text-align: left;
     background-color: #ffffff;
+    min-height: 100vh;
 }
 
 .entry__word {
@@ -86,7 +114,7 @@ body {
     font-weight: bold;
 }
 
-.entry__nested-box {
+.entry__nested-box, .about__nested-box {
     display: flex;
     flex-direction: column;
     text-align: left;
