@@ -1,70 +1,127 @@
+/*Color Palette:
+Red: #D4082A   
+Orange: #E87200   
+Yellow: #F5BB00  
+Green: #009E58    
+Purple: #6F60B8   
+White: #FFFFFF   
+Black: #000000   
+*/
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
 body {
+    min-height: 100vh;
+    font-family: 'Charis SIL', sans-serif;
+}
+
+/* Background Styles */
+.background-container {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: 
+        radial-gradient(circle at 0% 0%, #D4082A 0%, rgba(212, 8, 42, 0.1) 35%, transparent 50%),
+        radial-gradient(circle at 100% 0%, #E87200 0%, rgba(232, 114, 0, 0.1) 35%, transparent 50%),
+        radial-gradient(circle at 100% 100%, #F5BB00 0%, rgba(245, 187, 0, 0.1) 35%, transparent 50%),
+        radial-gradient(circle at 0% 100%, #009E58 0%, rgba(0, 158, 88, 0.1) 35%, transparent 50%),
+        radial-gradient(circle at 50% 50%, #6F60B8 0%, rgba(111, 96, 184, 0.1) 40%, transparent 60%);
+    background-color: #000000;
+    z-index: -1;
+}
+
+/* Layout Container */
+.content-wrapper {
+    position: relative;
+    width: 100%;
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: #333;
 }
-.container {
-    display: flex;                      /* Enable flexbox on the body */
-    justify-content: center;            /* Centers horizontally */
-    align-items: center;                /* Centers vertically */
-    height: 100vh;                      /* Full viewport height */
-    margin: 0;                 
-    background-color: #f4f4f4;
-}
+
+/* Header Styles */
 .header {
+    width: 100%;
+    padding: .5rem;
     display: flex;
-    flex-direction: column; 
-    width: 75%; 
-    justify-content: center;            
-    align-items: center;                
-    background-color: #ff8502;
-    outline: 5px solid #000000;  /* Adds a 5px solid outline with a dark color */
-    margin-bottom: 5%;
-  }
+    flex-direction: row;
+    align-items: center;
+    gap: 15rem;
+    background-color: #E87200;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.emblem {
+    max-width: 150px;
+    height: auto;
+    outline: 5px solid #000000
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Entry Styles */
 .entry {
     display: flex;
-    flex-direction: column;             /* Stack <div><.div> in a Column */
+    flex-direction: column;
     width: 75%;
     text-align: left;
     background-color: #ffffff;
-    outline: 5px solid #333; 
 }
+
+.entry__word {
+    margin: 5% 5% 0% 5%;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
 .entry__nested-box {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     text-align: left;
-    background-color: #ff8502;
-    outline: 5px solid #333; 
+    background-color: #ffffff;
+    outline: 5px solid #333;
     margin: 5%;
 }
-.entry__pos, .entry__definition {       /* Part of Speech (pos) */
+
+.entry__pos,
+.entry__definition {
     font-size: 22pt;
     font-weight: normal;
-    margin: 5% 2% 0% 5%                 /* Order: top, right, bottom, left */
+    margin: 5% 2% 0% 5%;
 }
+
 .entry__nested-box--sentence-example {
     display: flex;
-    justify-content: space-between;     /* Push items to opposite ends */
-    align-items: center;                
+    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
     margin: 0% 50% 0% 5%;
     font-size: 15pt;
 }
-.entry__word {
-    margin: 5% 5% 0% 5%; 
-    font-size: 30pt;
-    font-weight: bold;
-}
+
+/* Typography */
 h1 {
-    margin: 5%;                
-  }
+    margin: 5%;
+}
+
 h3 {
-    margin: 1% 0% 0% 2%; 
+    margin: 1% 0% 0% 2%;
     font-size: 18pt;
 }
+
 p,b {
     margin: 0% 0% 0% 5%;
     font-size: 15pt;
-}  
+}
