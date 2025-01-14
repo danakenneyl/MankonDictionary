@@ -7,7 +7,7 @@ function Browse() {
                         <li className="list-group-item">
                             B
                             <div className="list-group">
-                                <Link to="/entry" className="list-group-item list-group-item-action">
+                                <Link to="/mankondictionary/entry" className="list-group-item list-group-item-action">
                                     <div>
                                         <h5 className="mb-1">bɨŋə v.</h5>
                                     </div>

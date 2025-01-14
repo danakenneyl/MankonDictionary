@@ -2,15 +2,32 @@ import Button from "./Button"
 import Emblem from "./Emblem"
 import Search from "./Search"
 import Title from "./Title"
+import { SearchResult, SearchError } from './Search';
+import { useNavigate } from "react-router-dom";
+
 function Header() {
+  const navigate = useNavigate();
+  const handleSearch = (result: SearchResult | SearchError) => {
+    if ('error' in result) {
+      console.error(result.error);
+      return;
+    }
+    navigate("/entry");
+    // Now TypeScript knows all the properties available in result
+    console.log(result.englishWord);    // The English word searched
+    console.log(result.mankonWord);     // The Mankon translation
+    console.log(result.definition);     // The Mankon definition
+    console.log(result.wordAudioFiles); // Array of audio files
+    // etc.
+  };
     return <div className = "header">
                 <Emblem to="/" />
                 <Title/>
-                <Search/>
+                <Search onSearch={handleSearch} />
                 <div className="nav-buttons">
-                  <Button pageName="About" to="/about" />
-                  <Button pageName="Browse Dictionary" to="/browse-dictionary" />
-                  <Button pageName="Language Help" to="/language-help" />
+                  <Button pageName="About" to="/mankondictionary/about" />
+                  <Button pageName="Browse Dictionary" to="/mankondictionary/browse-dictionary" />
+                  <Button pageName="Language Help" to="/mankondictionary/language-help" />
               </div>
             </div>
 }

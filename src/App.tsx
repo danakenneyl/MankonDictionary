@@ -15,10 +15,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/browse-dictionary" element={<Browse />} />
-        <Route path="/language-help" element={<Alphabet />} />
-        <Route path="/entry" element={<Entry />} />
+        <Route path="/mankondictionary/about" element={<About />} />
+        <Route path="/mankondictionary/browse-dictionary" element={<Browse />} />
+        <Route path="/mankondictionary/language-help" element={<Alphabet />} />
+        <Route path="/mankondictionary/entry" element={<Entry />} />
       </Routes>
     </Router>
     </>
