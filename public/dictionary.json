@@ -10,9 +10,7 @@
             "sentencesAudioFiles": ["audio/bɨŋə_dance_sentence_1.wav", "audio/bɨŋə_dance_sentence_2.wav"]
         }
     },
-    "searchEnglish": [
-        {
-            "dance": "bɨŋə"
-        }
-    ]
+    "searchEnglish": {
+        "dance": "bɨŋə"
+    }
 }

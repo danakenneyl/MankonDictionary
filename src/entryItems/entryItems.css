@@ -17,6 +17,7 @@
 .translationEntry, .definitionEntry {
     margin:2%; 
     line-height: .1;
+    font-size: larger;
 }
 
 .card {
