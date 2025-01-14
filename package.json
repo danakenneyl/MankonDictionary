@@ -2,7 +2,7 @@
   "name": "mankondictionary-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://danakenneyl.github.io/MankonDictionary/",
+  "homepage": "https://danakenneyl.github.io/mankondictionary/",
   "type": "module",
   "scripts": {
     "dev": "vite",
